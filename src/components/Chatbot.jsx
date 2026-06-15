@@ -118,6 +118,43 @@ const Chatbot = ({ onBack }) => {
 
   return (
     <div className={styles.container}>
+      {/* Left animated side panel */}
+      <aside className={styles.sideLeft}>
+        {[
+          { icon: '💰', label: 'Scaler', sub: '~₹17L total fee' },
+          { icon: '🎓', label: 'NST', sub: '₹23–24L · 100% scholarship' },
+          { icon: '⚡', label: 'Vedam', sub: '₹18L · SAT accepted' },
+          { icon: '🏆', label: 'NIAT', sub: '₹8–18L · lowest fee' },
+          { icon: '🤖', label: 'AI Powered', sub: 'Instant answers' },
+        ].map((n, i) => (
+          <div key={i} className={styles.dataNode}>
+            <span className={styles.nodeIcon}>{n.icon}</span>
+            <span className={styles.nodeLabel}>
+              <strong>{n.label}</strong>
+              {n.sub}
+            </span>
+          </div>
+        ))}
+      </aside>
+
+      {/* Right animated side panel */}
+      <aside className={styles.sideRight}>
+        {[
+          { stat: '4', desc: 'New-gen colleges compared' },
+          { stat: '100%', desc: 'Scholarship available on merit' },
+          { stat: '2500+', desc: 'Hiring companies in network' },
+          { stat: 'Free', desc: 'No JEE required for admission' },
+        ].map((c, i) => (
+          <div key={i} className={styles.statCard}>
+            <span className={styles.cardStat}>{c.stat}</span>
+            <span className={styles.cardDesc}>
+              <span className={styles.liveDot}></span>
+              {c.desc}
+            </span>
+          </div>
+        ))}
+      </aside>
+
       {/* Header */}
       <header className={styles.header}>
         <div className={styles.headerLeft}>
