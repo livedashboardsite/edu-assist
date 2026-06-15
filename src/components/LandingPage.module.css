@@ -1,4 +1,4 @@
-/* ── Container ──────────────────────────────────────── */
+/* ── Container ───────────────────────────────────────── */
 .container {
   min-height: 100vh;
   display: flex;
@@ -24,8 +24,9 @@
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(9, 9, 11, 0.75);
+  background: var(--glass-bg);
   animation: slideDown 0.5s ease both;
+  gap: 0.75rem;
 }
 
 @keyframes slideDown {
@@ -321,10 +322,10 @@
   gap: 1rem;
   padding: 1rem 1.4rem;
   border-radius: 16px;
-  background: rgba(18, 18, 20, 0.82);
-  border: 1px solid rgba(255, 255, 255, 0.09);
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
   backdrop-filter: blur(20px);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255,255,255,0.06);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12), inset 0 1px 0 rgba(255,255,255,0.06);
   animation: float 6s ease-in-out infinite;
   min-width: 230px;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
@@ -498,7 +499,7 @@
 .footer {
   border-top: 1px solid var(--glass-border);
   padding: 1.25rem 3rem;
-  background: rgba(9, 9, 11, 0.6);
+  background: var(--glass-bg);
   backdrop-filter: blur(12px);
 }
 
