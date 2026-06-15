@@ -93,7 +93,7 @@ const LandingPage = ({ onLaunch }) => {
             <div className={styles.cardIcon}>💰</div>
             <div>
               <h4>100% Scholarship</h4>
-              <p>Available on merit</p>
+              <p><span className={styles.cardLiveDot}></span>Available on merit</p>
             </div>
           </div>
 
@@ -101,7 +101,7 @@ const LandingPage = ({ onLaunch }) => {
             <div className={styles.cardIcon}>🏆</div>
             <div>
               <h4>Google · Amazon</h4>
-              <p>Top recruiters</p>
+              <p><span className={styles.cardLiveDot}></span>Top recruiters</p>
             </div>
           </div>
 
@@ -109,7 +109,7 @@ const LandingPage = ({ onLaunch }) => {
             <div className={styles.cardIcon}>🎓</div>
             <div>
               <h4>SAT Accepted</h4>
-              <p>No JEE required</p>
+              <p><span className={styles.cardLiveDot}></span>No JEE required</p>
             </div>
           </div>
 
@@ -117,7 +117,7 @@ const LandingPage = ({ onLaunch }) => {
             <div className={styles.cardIcon}>⚡</div>
             <div>
               <h4>4 Colleges</h4>
-              <p>Compared instantly</p>
+              <p><span className={styles.cardLiveDot}></span>Compared instantly</p>
             </div>
           </div>
         </div>
