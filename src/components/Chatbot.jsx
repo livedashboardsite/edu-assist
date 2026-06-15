@@ -50,7 +50,7 @@ function getShuffled(exclude = []) {
   return shuffled.slice(0, 4);
 }
 
-const Chatbot = ({ onBack }) => {
+const Chatbot = ({ onBack, toggleTheme, theme }) => {
   const [messages, setMessages] = useState([
     {
       id: 1,
@@ -172,7 +172,10 @@ const Chatbot = ({ onBack }) => {
             </div>
           </div>
         </div>
-        <button className={styles.exploreBtn} onClick={handleExploreCode}>
+        <button className="theme-toggle" onClick={toggleTheme} title="Toggle theme">
+            {theme === 'dark' ? '☀️' : '🌙'}
+          </button>
+          <button className={styles.exploreBtn} onClick={handleExploreCode}>
           <Globe size={16} />
           Explore Code
         </button>
