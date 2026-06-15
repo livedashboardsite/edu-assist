@@ -5,12 +5,50 @@ import remarkGfm from 'remark-gfm';
 import { generateChatResponse } from '../utils/chatbotLogic';
 import styles from './Chatbot.module.css';
 
-const SUGGESTIONS = [
-  "Compare Scaler and NST",
-  "What is the fee for Vedam?",
-  "NIAT placements",
-  "Start mock interview"
+// Full pool of college-specific suggestions
+const ALL_SUGGESTIONS = [
+  // Scaler
+  "What is the fee at Scaler School of Technology?",
+  "How to apply for NSET at Scaler?",
+  "Does Scaler offer 100% scholarship?",
+  "What are Scaler's top placement companies?",
+  "What makes Scaler different from IITs?",
+
+  // NST
+  "What is the fee structure at NST?",
+  "How to crack the NSAT exam?",
+  "Does NST offer women-only scholarships?",
+  "Which universities partner with NST?",
+  "What is 1:1 mentorship at NST?",
+
+  // Vedam
+  "What is the fee at Vedam college?",
+  "How to appear for VSAT?",
+  "Does Vedam accept SAT scores?",
+  "Who mentors students at Vedam?",
+  "What is Vedam's coding-from-day-one approach?",
+
+  // NIAT
+  "What is the fee range at NIAT?",
+  "How does NIAT's upskilling program work?",
+  "Which universities are NIAT partners?",
+  "What is the NxtWave Assessment Test?",
+  "Does NIAT guarantee placements?",
+
+  // Comparisons
+  "Compare Scaler vs NST fees",
+  "Scaler vs Vedam — which is better for CS?",
+  "NST vs NIAT — which has better placements?",
+  "Which college has the best scholarship?",
+  "Which new-gen college is best for girls?",
+  "Compare all 4 colleges side by side",
 ];
+
+function getShuffled(exclude = []) {
+  const pool = ALL_SUGGESTIONS.filter(s => !exclude.includes(s));
+  const shuffled = [...pool].sort(() => Math.random() - 0.5);
+  return shuffled.slice(0, 4);
+}
 
 const Chatbot = ({ onBack }) => {
   const [messages, setMessages] = useState([
@@ -22,6 +60,8 @@ const Chatbot = ({ onBack }) => {
   ]);
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const [suggestions, setSuggestions] = useState(() => getShuffled());
+  const [chipsVisible, setChipsVisible] = useState(true);
   const messagesEndRef = useRef(null);
 
   const scrollToBottom = () => {
@@ -32,19 +72,27 @@ const Chatbot = ({ onBack }) => {
     scrollToBottom();
   }, [messages, isLoading]);
 
-  const handleSend = async (text) => {
-    if (!text.trim()) return;
+  const shuffleSuggestions = (usedText) => {
+    setChipsVisible(false);
+    setTimeout(() => {
+      setSuggestions(getShuffled([usedText]));
+      setChipsVisible(true);
+    }, 300);
+  };
 
-    const userMsg = { id: Date.now(), sender: 'user', text };
+  const handleSend = async (text) => {
+    const trimmed = (text || input).trim();
+    if (!trimmed) return;
+
+    const userMsg = { id: Date.now(), sender: 'user', text: trimmed };
     setMessages(prev => [...prev, userMsg]);
     setInput('');
     setIsLoading(true);
+    shuffleSuggestions(trimmed);
 
-    // Simulate network delay for a more natural feel
     setTimeout(() => {
       try {
-        const { intent, response } = generateChatResponse(text);
-        
+        const { intent, response } = generateChatResponse(trimmed);
         const botMsg = {
           id: Date.now() + 1,
           sender: 'bot',
@@ -78,7 +126,7 @@ const Chatbot = ({ onBack }) => {
           </button>
           <div className={styles.botInfo}>
             <div className={styles.avatarWrap}>
-              <Bot size={20} className={styles.avatarIcon} />
+              <Bot size={18} className={styles.avatarIcon} />
               <span className={styles.statusDot}></span>
             </div>
             <div>
@@ -88,7 +136,7 @@ const Chatbot = ({ onBack }) => {
           </div>
         </div>
         <button className={styles.exploreBtn} onClick={handleExploreCode}>
-          <Globe size={18} />
+          <Globe size={16} />
           Explore Code
         </button>
       </header>
@@ -97,10 +145,13 @@ const Chatbot = ({ onBack }) => {
       <main className={styles.chatArea}>
         <div className={styles.messagesList}>
           {messages.map((msg) => (
-            <div key={msg.id} className={`${styles.messageWrapper} ${msg.sender === 'user' ? styles.userWrapper : styles.botWrapper}`}>
+            <div
+              key={msg.id}
+              className={`${styles.messageWrapper} ${msg.sender === 'user' ? styles.userWrapper : styles.botWrapper}`}
+            >
               {msg.sender === 'bot' && (
                 <div className={styles.msgAvatar}>
-                  <Bot size={18} />
+                  <Bot size={16} />
                 </div>
               )}
               <div className={`${styles.message} ${msg.sender === 'user' ? styles.userMsg : styles.botMsg}`}>
@@ -111,7 +162,7 @@ const Chatbot = ({ onBack }) => {
                 ) : (
                   msg.text
                 )}
-                {msg.intent && msg.intent === 'mock_interview' && (
+                {msg.intent === 'mock_interview' && (
                   <div className={styles.mockActions}>
                     <button className={styles.mockBtn} onClick={() => handleSend("Yes, let's start")}>Start</button>
                     <button className={styles.mockBtn} onClick={() => handleSend("Maybe later")}>Later</button>
@@ -120,7 +171,7 @@ const Chatbot = ({ onBack }) => {
               </div>
               {msg.sender === 'user' && (
                 <div className={styles.msgAvatarUser}>
-                  <User size={18} />
+                  <User size={16} />
                 </div>
               )}
             </div>
@@ -129,7 +180,7 @@ const Chatbot = ({ onBack }) => {
           {isLoading && (
             <div className={`${styles.messageWrapper} ${styles.botWrapper}`}>
               <div className={styles.msgAvatar}>
-                <Bot size={18} />
+                <Bot size={16} />
               </div>
               <div className={`${styles.message} ${styles.botMsg}`}>
                 <div className={styles.typingIndicator}>
@@ -141,16 +192,20 @@ const Chatbot = ({ onBack }) => {
           <div ref={messagesEndRef} />
         </div>
 
-        {/* Suggestions */}
-        {messages.length < 3 && (
-          <div className={styles.suggestions}>
-            {SUGGESTIONS.map((s, i) => (
-              <button key={i} className={styles.suggestionChip} onClick={() => handleSend(s)}>
-                {s}
-              </button>
-            ))}
-          </div>
-        )}
+        {/* Shuffling Suggestions — always visible */}
+        <div className={`${styles.suggestions} ${chipsVisible ? styles.chipsIn : styles.chipsOut}`}>
+          {suggestions.map((s, i) => (
+            <button
+              key={s}
+              className={styles.suggestionChip}
+              style={{ animationDelay: `${i * 0.06}s` }}
+              onClick={() => handleSend(s)}
+              disabled={isLoading}
+            >
+              {s}
+            </button>
+          ))}
+        </div>
 
         {/* Input Area */}
         <div className={styles.inputArea}>
@@ -164,12 +219,12 @@ const Chatbot = ({ onBack }) => {
               className={styles.input}
               disabled={isLoading}
             />
-            <button 
-              className={styles.sendBtn} 
+            <button
+              className={styles.sendBtn}
               onClick={() => handleSend(input)}
               disabled={!input.trim() || isLoading}
             >
-              {isLoading ? <Loader2 size={20} className={styles.spin} /> : <Send size={20} />}
+              {isLoading ? <Loader2 size={18} className={styles.spin} /> : <Send size={18} />}
             </button>
           </div>
         </div>
