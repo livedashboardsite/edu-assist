@@ -4,7 +4,7 @@
 
 <br/>
 
-<img src="https://readme-typing-svg.demolab.com/?lines=Instant+fee+comparisons+%26+scholarship+insights;Compare+Scaler%2C+NST%2C+Vedam+%26+NIAT+instantly;No+JEE+required+%E2%80%94+100%25+merit+scholarships;Built+for+students%2C+by+a+student+%F0%9F%9A%80&font=Fira+Code&center=true&width=600&height=50&color=A78BFA&vCenter=true&size=22" alt="Typing SVG" />
+
 
 <br/>
 
