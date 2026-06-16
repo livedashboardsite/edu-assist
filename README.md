@@ -19,7 +19,7 @@
 <br />
 
 <a href="https://livedashboardsite.github.io/edu-assist-neo/">
-  <img src="https://img.shields.io/badge/🌐%20LIVE%20DEMO-Click%20to%20Explore-8b5cf6?style=for-the-badge&labelColor=18181b&logo=googlechrome&logoColor=white" alt="Live Demo" height="70"/>
+  <img src="https://img.shields.io/badge/🌐%20LIVE%20DEMO-Click%20to%20Explore-8b5cf6?style=for-the-badge&labelColor=18181b&logo=googlechrome&logoColor=white" alt="Live Demo" height="90"/>
 </a>
 
 </div>
