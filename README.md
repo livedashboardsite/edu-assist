@@ -4,7 +4,6 @@
 
 ### AI-Powered College Guidance for New-Gen Tech Colleges
 
-[![Live Demo](https://img.shields.io/badge/🌐_Live_Demo-Visit_Site-8b5cf6?style=for-the-badge)](https://livedashboardsite.github.io/edu-assist-neo/)
 [![GitHub](https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github)](https://github.com/livedashboardsite/edu-assist-neo)
 [![React](https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react)](https://react.dev/)
 [![Vite](https://img.shields.io/badge/Vite-Build_Tool-646CFF?style=for-the-badge&logo=vite)](https://vitejs.dev/)
@@ -17,7 +16,7 @@
 
 <br />
 
-![EduAssist Neo Banner](https://og-image-generator.vercel.app/api?title=EduAssist+Neo&description=AI+College+Guidance&theme=dark)
+### 🌐 [**→ Try the Live Demo ←**](https://livedashboardsite.github.io/edu-assist-neo/)
 
 </div>
 
@@ -35,6 +34,7 @@
 | 🎯 **Smart Suggestions** | Rotating question chips with instant answers |
 | 📊 **Side-by-Side Compare** | Full comparison table across all colleges |
 | 🎨 **Animated UI** | Floating cards, shimmer effects & live indicators |
+| 🌗 **Light / Dark Theme** | Toggle between themes, preference saved automatically |
 
 ---
 
@@ -57,7 +57,7 @@ All colleges offer **up to 100% merit-based scholarships** — no JEE required!
 
 ```
 Frontend    →  React 18 + Vite
-Styling     →  CSS Modules (dark theme, glass morphism)
+Styling     →  CSS Modules (dark/light theme, glass morphism)
 Markdown    →  react-markdown + remark-gfm
 Icons       →  lucide-react
 Routing     →  Single-page app (no router needed)
@@ -112,7 +112,7 @@ edu-assist-neo/
 │   │   └── colleges.json          # College data (fees, scholarships, placements)
 │   ├── App.jsx
 │   ├── main.jsx
-│   └── index.css                  # Global styles & CSS variables
+│   └── index.css                  # Global styles, dark/light theme variables
 ├── public/
 ├── vite.config.js
 └── package.json
@@ -153,7 +153,7 @@ edu-assist-neo/
 
 ## 🎨 UI Highlights
 
-- **Dark glassmorphism** design with purple/blue gradient accents
+- **Dark & light glassmorphism** design with purple/blue gradient accents
 - **Animated floating cards** on the hero with shimmer lines, icon pulses & live dots
 - **Orbital ring animations** around the hero visual
 - **Side panel widgets** in the chatbot showing live college stats
@@ -177,7 +177,6 @@ Contributions are welcome! Here's how:
 - Add more colleges (Plaksha, Krea, Flame, etc.)
 - Integrate a real AI API (Claude, Gemini, GPT)
 - Add a college ranking/filter page
-- Dark/light theme toggle
 - Mobile app version
 
 ---
