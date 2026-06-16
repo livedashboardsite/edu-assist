@@ -1,8 +1,12 @@
 <div align="center">
 
-# 🎓 EduAssist Neo
+<img src="https://capsule-render.vercel.app/api?type=waving&color=8b5cf6&height=180&section=header&text=EduAssist%20Neo&fontSize=50&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=AI-Powered%20College%20Guidance%20for%20New-Gen%20Tech%20Colleges&descAlignY=58&descAlign=50" width="100%"/>
 
-### AI-Powered College Guidance for New-Gen Tech Colleges
+<br/>
+
+<img src="https://readme-typing-svg.demolab.com/?lines=Instant+fee+comparisons+%26+scholarship+insights;Compare+Scaler%2C+NST%2C+Vedam+%26+NIAT+instantly;No+JEE+required+%E2%80%94+100%25+merit+scholarships;Built+for+students%2C+by+a+student+%F0%9F%9A%80&font=Fira+Code&center=true&width=600&height=50&color=A78BFA&vCenter=true&size=22" alt="Typing SVG" />
+
+<br/>
 
 [![GitHub](https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github)](https://github.com/livedashboardsite/edu-assist-neo)
 [![React](https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react)](https://react.dev/)
@@ -11,20 +15,25 @@
 
 <br />
 
-> Instant fee comparisons, scholarship insights, placement stats & mock interviews —  
-> built for students exploring India's best new-generation tech colleges.
+</div>
 
-<br />
+---
 
-<br />
+## 🚀 Live Demo
 
-<a href="https://livedashboardsite.github.io/edu-assist-neo/">
-  <img src="https://img.shields.io/badge/🚀%20LIVE%20DEMO-Click%20to%20Explore-8b5cf6?style=for-the-badge&labelColor=18181b&logo=googlechrome&logoColor=white" alt="Live Demo" height="70"/>
-</a>
+<div align="center">
+
+[![Live Demo](https://img.shields.io/badge/🚀_LIVE_DEMO-Click_to_Explore-8b5cf6?style=for-the-badge&labelColor=18181b)](https://livedashboardsite.github.io/edu-assist-neo/)
+
+<img src="https://readme-typing-svg.demolab.com/?lines=%E2%9A%A1+Live+and+deployed+on+GitHub+Pages;%F0%9F%9A%80+Click+above+to+try+it+now!&font=Fira+Code&center=true&width=450&height=35&color=10B981&vCenter=true&size=15&pause=2000" alt="status" />
+
+**Try the Project Here:** [https://livedashboardsite.github.io/edu-assist-neo/](https://livedashboardsite.github.io/edu-assist-neo/)
 
 </div>
 
 ---
+
+<img src="https://capsule-render.vercel.app/api?type=transparent&height=2&color=8b5cf6&section=header"/>
 
 ## ✨ Features
 
@@ -59,6 +68,17 @@ All colleges offer **up to 100% merit-based scholarships** — no JEE required!
 
 ## 🛠️ Tech Stack
 
+<div align="center">
+
+![React](https://skillicons.dev/icons?i=react)
+![Vite](https://skillicons.dev/icons?i=vite)
+![JavaScript](https://skillicons.dev/icons?i=js)
+![CSS](https://skillicons.dev/icons?i=css)
+![HTML](https://skillicons.dev/icons?i=html)
+![GitHub Actions](https://skillicons.dev/icons?i=githubactions)
+
+</div>
+
 ```
 Frontend    →  React 18 + Vite
 Styling     →  CSS Modules (dark/light theme, glass morphism)
@@ -68,7 +88,7 @@ Routing     →  Single-page app (no router needed)
 Deployment  →  GitHub Pages via GitHub Actions
 ```
 
----
+<img src="https://capsule-render.vercel.app/api?type=transparent&height=2&color=8b5cf6&section=header"/>
 
 ## 🚀 Getting Started
 
@@ -122,9 +142,15 @@ edu-assist-neo/
 └── package.json
 ```
 
----
+<img src="https://capsule-render.vercel.app/api?type=transparent&height=2&color=8b5cf6&section=header"/>
 
 ## 💬 Sample Questions You Can Ask
+
+<div align="center">
+
+<img src="https://readme-typing-svg.demolab.com/?lines=%22What+is+the+fee+at+Scaler%3F%22;%22Compare+all+4+colleges+side+by+side%22;%22Which+college+has+the+best+scholarship%3F%22&font=Fira+Code&center=true&width=500&height=40&color=60A5FA&vCenter=true&size=16&pause=1800" alt="sample questions" />
+
+</div>
 
 ```
 💰 Fee & Cost
@@ -153,7 +179,7 @@ edu-assist-neo/
   "Which new-gen college is best for girls?"
 ```
 
----
+<img src="https://capsule-render.vercel.app/api?type=transparent&height=2&color=8b5cf6&section=header"/>
 
 ## 🎨 UI Highlights
 
@@ -195,8 +221,10 @@ This project is licensed under the **MIT License** — feel free to use, modify 
 
 Crafted with ♥ by **Prathamesh Thakur**
 
-⭐ Star this repo if you found it helpful!
+<img src="https://readme-typing-svg.demolab.com/?lines=%E2%AD%90+Star+this+repo+if+you+found+it+helpful!;%F0%9F%9A%80+Built+for+a+hackathon%2C+made+with+love&font=Fira+Code&center=true&width=420&height=35&color=F59E0B&vCenter=true&size=16&pause=2000" alt="footer" />
 
 [![Star](https://img.shields.io/github/stars/livedashboardsite/edu-assist-neo?style=social)](https://github.com/livedashboardsite/edu-assist-neo)
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=8b5cf6&height=100&section=footer"/>
 
 </div>
