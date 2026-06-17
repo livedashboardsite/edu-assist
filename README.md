@@ -23,7 +23,7 @@
 
 <img src="https://readme-typing-svg.demolab.com/?lines=%E2%9A%A1+Live+and+deployed+on+GitHub+Pages;%F0%9F%9A%80+Click+above+to+try+it+now!&font=Fira+Code&center=true&width=450&height=35&color=10B981&vCenter=true&size=15&pause=2000" alt="status" />
 
-**Try the Project Here:** [https://livedashboardsite.github.io/edu-assist-neo/](https://livedashboardsite.github.io/edu-assist-neo/)
+**Try the Project Here:**(https://livedashboardsite.github.io/edu-assist/)
 
 </div>
 
