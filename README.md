@@ -209,17 +209,9 @@ Contributions are welcome! Here's how:
 
 > **Note:** Both contributors shown on this repository — **livedashboardsite** and **thakurpratham539-coder** — are personal GitHub accounts belonging to the same person (Prathamesh Thakur). The project was originally created under `thakurpratham539-coder` and later transferred to `livedashboardsite`, which is why both appear in the contributor list.
 
----
-
-## 📄 License
-
-This project is licensed under the **MIT License** — feel free to use, modify and distribute.
-
----
-
 <div align="center">
 
-Crafted with ♥ by **Prathamesh Thakur**
+Crafted with ♥ by **Prathamesh Thakur** All rights are reserved
 
 <img src="https://readme-typing-svg.demolab.com/?lines=%E2%AD%90+Star+this+repo+if+you+found+it+helpful!;%F0%9F%9A%80+Built+for+a+hackathon%2C+made+with+love&font=Fira+Code&center=true&width=420&height=35&color=F59E0B&vCenter=true&size=16&pause=2000" alt="footer" />
 
